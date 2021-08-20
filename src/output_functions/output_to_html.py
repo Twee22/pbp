@@ -526,7 +526,7 @@ def create_spray_chart(profile, total):
     
     message = """
     <div class="container">
-        <img src=\"/home/ilan/Documents/pbp/images/spray_chart_base_2.png\" alt=\"Image not found\" width=\"350\" height=\"500\">
+        <img src=\"/home/ilan/Documents/code/play_by_play/images/spray_chart_base_2.png\" alt=\"Image not found\" width=\"350\" height=\"500\">
         <div class="leftfield">{:.2f}%</div>
         <div class="leftcentre">{:.2f}%</div>
         <div class="centrefield">{:.2f}%</div>
@@ -555,7 +555,7 @@ def create_spray_chart(profile, total):
     if total:
         message += """
         <div class="container">
-            <img src=\"/home/ilan/Documents/pbp/images/spray_chart_base_2.png\" alt=\"Image not found\" width=\"350\" height=\"500\">
+            <img src=\"/home/ilan/Documents/code/play_by_play/images/spray_chart_base_2.png\" alt=\"Image not found\" width=\"350\" height=\"500\">
             <div class="leftfield">{:.2f}%</div>
             <div class="leftcentre">{:.2f}%</div>
             <div class="centrefield">{:.2f}%</div>
