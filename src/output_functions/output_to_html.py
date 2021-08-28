@@ -111,8 +111,8 @@ def get_style_sheet(profiles, team_name, year_for_roster, year_for_report, how_m
         left: 110px;
     }
     img {
-        width: 350;
-        height: 500;
+        width: 280;
+        height: 400;
     }
     body {
         font-family:verdana;
