@@ -1,5 +1,7 @@
 import re
 
+from os.path import isfile
+
 from copy import deepcopy
 
 from src.player_profile.player import create_profile, check_data_point
@@ -60,11 +62,12 @@ def get_official_statistics(profile, team_name, year_from_list, year):
     doc_name = "data/" + team_name + "/" + year + "/" + team_name + "_official_statistics_" + year +".txt"
     
     try:
-        # Try statement checks that the file exists
-        # This should be updated to higher standards at some point
+        # Try statement ensures that format is consistent
+        
+        if not isfile(doc_name):
+            return 
+        
         with open(doc_name, "r") as f:
-
-            # Rewrite this to a higher standard
 
             line = f.readline()
             check = False
