@@ -46,69 +46,75 @@ def get_html_output(profiles, team_name, year_for_roster, year_for_report, how_m
 def get_style_sheet(profiles, team_name, year_for_roster, year_for_report, how_many_pa_to_appear, years_seperated_or_together):
     style_sheet = """
     <style>
+    .spray-container {
+        display: flex;
+        justify-content: center;
+    }
     .container {
         position: relative;
-        font-size: 12px;
+        text-align: center;
+        color: black;
+        padding: 30px;
     }
     .leftfield {
         position: absolute;
-        top: 200px;
-        left: 10px;
+        top: 38%;
+        left: 10%;
     }
     .leftcentre {
         position: absolute;
-        top: 140px;
-        left: 50px;
+        top: 30%;
+        left: 22%;
     }
     .centrefield {
         position: absolute;
-        top: 100px;
-        left: 150px;
+        top: 25%;
+        left: 43%;
     }
     .rightcentre {
         position: absolute;
-        top: 140px;
-        left: 240px;
+        top: 30%;
+        left: 67%;
     }
     .rightfield {
         position: absolute;
-        top: 200px;
-        left: 290px;
+        top: 38%;
+        left: 78%;
     }
     .thirdbase {
         position: absolute;
-        top: 300px;
-        left: 50px;
+        top: 57%;
+        left: 18%;
     }
     .shortstop {
         position: absolute;
-        top: 230px;
-        left: 80px;
+        top: 48%;
+        left: 27%;
     }
     .secondbase {
         position: absolute;
-        top: 230px;
-        left: 210px;
+        top: 48%;
+        left: 57%;
     }
     .firstbase {
         position: absolute;
-        top: 300px;
-        left: 250px;
+        top: 57%;
+        left: 66%;
     }
     .pitcher {
         position: absolute;
-        top: 315px;
-        left: 150px;
+        top: 60%;
+        left: 43%;
     }
     .catcher {
         position: absolute;
-        top: 415px;
-        left: 150px;
+        top: 88%;
+        left: 43%;
     }
     .image_name {
         position: absolute;
-        top: 470px;
-        left: 110px;
+        top: 100%;
+        left: 30%
     }
     img {
         width: 280;
@@ -525,21 +531,22 @@ def format_profile_to_html(profile):
 def create_spray_chart(profile, total):
     
     message = """
-    <div class="container">
-        <img src=\"/home/ilan/Documents/code/play_by_play/images/spray_chart_base_2.png\" alt=\"Image not found\" width=\"350\" height=\"500\">
-        <div class="leftfield">{:.2f}%</div>
-        <div class="leftcentre">{:.2f}%</div>
-        <div class="centrefield">{:.2f}%</div>
-        <div class="rightcentre">{:.2f}%</div>
-        <div class="rightfield">{:.2f}%</div>
-        <div class="thirdbase">{:.2f}%</div>
-        <div class="shortstop">{:.2f}%</div>
-        <div class="secondbase">{:.2f}%</div>
-        <div class="firstbase">{:.2f}%</div>
-        <div class="pitcher">{:.2f}%</div>
-        <div class="catcher">{:.2f}%</div>
-        <div class="image_name">Overall Spray Chart</div>
-    </div>
+    <div class="spray-container">
+        <div class="container">
+            <img src=\"/home/ilan/Documents/code/play_by_play/images/spray_chart_base_2.png\" alt=\"Image not found\" width=\"350\" height=\"500\">
+            <div class="leftfield">{:.2f}%</div>
+            <div class="leftcentre">{:.2f}%</div>
+            <div class="centrefield">{:.2f}%</div>
+            <div class="rightcentre">{:.2f}%</div>
+            <div class="rightfield">{:.2f}%</div>
+            <div class="thirdbase">{:.2f}%</div>
+            <div class="shortstop">{:.2f}%</div>
+            <div class="secondbase">{:.2f}%</div>
+            <div class="firstbase">{:.2f}%</div>
+            <div class="pitcher">{:.2f}%</div>
+            <div class="catcher">{:.2f}%</div>
+            <div class="image_name">Overall Spray Chart</div>
+        </div>
     """.format(profile["Location"]["7"]/total*100, profile["Location"]["78"]/total*100,
             profile["Location"]["8"]/total*100, profile["Location"]["89"]/total*100, 
             profile["Location"]["9"]/total*100, profile["Location"]["5"]/total*100,
@@ -554,20 +561,21 @@ def create_spray_chart(profile, total):
 
     if total:
         message += """
-        <div class="container">
-            <img src=\"/home/ilan/Documents/code/play_by_play/images/spray_chart_base_2.png\" alt=\"Image not found\" width=\"350\" height=\"500\">
-            <div class="leftfield">{:.2f}%</div>
-            <div class="leftcentre">{:.2f}%</div>
-            <div class="centrefield">{:.2f}%</div>
-            <div class="rightcentre">{:.2f}%</div>
-            <div class="rightfield">{:.2f}%</div>
-            <div class="thirdbase">{:.2f}%</div>
-            <div class="shortstop">{:.2f}%</div>
-            <div class="secondbase">{:.2f}%</div>
-            <div class="firstbase">{:.2f}%</div>
-            <div class="pitcher">{:.2f}%</div>
-            <div class="catcher">{:.2f}%</div>
-            <div class="image_name">Spray Chart for XBHs</div>
+            <div class="container">
+                <img src=\"/home/ilan/Documents/code/play_by_play/images/spray_chart_base_2.png\" alt=\"Image not found\" width=\"350\" height=\"500\">
+                <div class="leftfield">{:.2f}%</div>
+                <div class="leftcentre">{:.2f}%</div>
+                <div class="centrefield">{:.2f}%</div>
+                <div class="rightcentre">{:.2f}%</div>
+                <div class="rightfield">{:.2f}%</div>
+                <div class="thirdbase">{:.2f}%</div>
+                <div class="shortstop">{:.2f}%</div>
+                <div class="secondbase">{:.2f}%</div>
+                <div class="firstbase">{:.2f}%</div>
+                <div class="pitcher">{:.2f}%</div>
+                <div class="catcher">{:.2f}%</div>
+                <div class="image_name">Spray Chart for XBHs</div>
+            </div>
         </div>
         """.format(profile["XBHLocation"]["7"]/total*100, profile["XBHLocation"]["78"]/total*100,
                 profile["XBHLocation"]["8"]/total*100, profile["XBHLocation"]["89"]/total*100, 
@@ -575,5 +583,9 @@ def create_spray_chart(profile, total):
                 profile["XBHLocation"]["6"]/total*100, profile["XBHLocation"]["4"]/total*100, 
                 profile["XBHLocation"]["3"]/total*100, profile["XBHLocation"]["2"]/total*100,
                 profile["XBHLocation"]["1"]/total*100)
-
+    else:
+        message += """
+        </div>
+        """
+        
     return message

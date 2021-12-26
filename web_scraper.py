@@ -265,6 +265,13 @@ schools = [
         "initial_scrape_type": "dakstats",
         "final_scrape_type": "dakstats"
         },
+        {"name": "Columbia",
+        "school_name": "columbia",
+        "year": "2021",
+        "url": "http://www.dakstats.com/WebSync/Pages/Team/TeamSchedule.aspx?association=10&sg=MBA&sea=NAIMBA_2021&team=20727",
+        "initial_scrape_type": "dakstats",
+        "final_scrape_type": "dakstats"
+        },
         {"name": "Columbia International",
         "school_name": "columbia_international",
         "year": "2020",
@@ -1179,6 +1186,13 @@ schools = [
         "school_name": "texas_wesleyan",
         "year": "2021",
         "url": "http://www.dakstats.com/WebSync/Pages/Team/TeamSchedule.aspx?association=10&sg=MBA&team=1787&sea=NAIMBA_2021",
+        "initial_scrape_type": "dakstats",
+        "final_scrape_type": "dakstats"
+        },
+        {"name": "Southeastern",
+        "school_name": "southeastern",
+        "year": "2021",
+        "url": "http://www.dakstats.com/WebSync/Pages/Team/TeamSchedule.aspx?association=10&sg=MBA&sea=NAIMBA_2021&team=9105",
         "initial_scrape_type": "dakstats",
         "final_scrape_type": "dakstats"
         }

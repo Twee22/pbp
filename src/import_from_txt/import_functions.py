@@ -38,8 +38,11 @@ def get_players(team_name, year_from_list, year):
             counter = 0
             for data_point in order:
                 if check_data_point(data_point):
-                    profile[data_point] = split_line[counter]
-                    counter += 1
+                    try:
+                        profile[data_point] = split_line[counter]
+                        counter += 1
+                    except:
+                        continue
 
             profile = fill_empty_sections_profile(profile)
 
