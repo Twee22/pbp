@@ -535,9 +535,9 @@ def create_spray_chart(profile, total):
         <div class="container">
             <img src=\"/home/ilan/Documents/code/play_by_play/images/spray_chart_base_2.png\" alt=\"Image not found\" width=\"350\" height=\"500\">
             <div class="leftfield">{:.2f}%</div>
-            <div class="leftcentre">{:.2f}%</div>
+            <div class="leftcentre">{}</div>
             <div class="centrefield">{:.2f}%</div>
-            <div class="rightcentre">{:.2f}%</div>
+            <div class="rightcentre">{}</div>
             <div class="rightfield">{:.2f}%</div>
             <div class="thirdbase">{:.2f}%</div>
             <div class="shortstop">{:.2f}%</div>
@@ -547,8 +547,8 @@ def create_spray_chart(profile, total):
             <div class="catcher">{:.2f}%</div>
             <div class="image_name">Overall Spray Chart</div>
         </div>
-    """.format(profile["Location"]["7"]/total*100, profile["Location"]["78"]/total*100,
-            profile["Location"]["8"]/total*100, profile["Location"]["89"]/total*100, 
+    """.format(profile["Location"]["7"]/total*100, format_gaps(profile["Location"]["78"]/total*100),
+            profile["Location"]["8"]/total*100, format_gaps(profile["Location"]["89"]/total*100), 
             profile["Location"]["9"]/total*100, profile["Location"]["5"]/total*100,
             profile["Location"]["6"]/total*100, profile["Location"]["4"]/total*100, 
             profile["Location"]["3"]/total*100, profile["Location"]["2"]/total*100,
@@ -564,9 +564,9 @@ def create_spray_chart(profile, total):
             <div class="container">
                 <img src=\"/home/ilan/Documents/code/play_by_play/images/spray_chart_base_2.png\" alt=\"Image not found\" width=\"350\" height=\"500\">
                 <div class="leftfield">{:.2f}%</div>
-                <div class="leftcentre">{:.2f}%</div>
+                <div class="leftcentre">{}</div>
                 <div class="centrefield">{:.2f}%</div>
-                <div class="rightcentre">{:.2f}%</div>
+                <div class="rightcentre">{}</div>
                 <div class="rightfield">{:.2f}%</div>
                 <div class="thirdbase">{:.2f}%</div>
                 <div class="shortstop">{:.2f}%</div>
@@ -577,8 +577,8 @@ def create_spray_chart(profile, total):
                 <div class="image_name">Spray Chart for XBHs</div>
             </div>
         </div>
-        """.format(profile["XBHLocation"]["7"]/total*100, profile["XBHLocation"]["78"]/total*100,
-                profile["XBHLocation"]["8"]/total*100, profile["XBHLocation"]["89"]/total*100, 
+        """.format(profile["XBHLocation"]["7"]/total*100, format_gaps(profile["XBHLocation"]["78"]/total*100),
+                profile["XBHLocation"]["8"]/total*100, format_gaps(profile["XBHLocation"]["89"]/total*100), 
                 profile["XBHLocation"]["9"]/total*100, profile["XBHLocation"]["5"]/total*100,
                 profile["XBHLocation"]["6"]/total*100, profile["XBHLocation"]["4"]/total*100, 
                 profile["XBHLocation"]["3"]/total*100, profile["XBHLocation"]["2"]/total*100,
@@ -589,3 +589,9 @@ def create_spray_chart(profile, total):
         """
         
     return message
+
+def format_gaps(input_number):
+    if input_number == 0:
+        return ''
+    else:
+        return "{:.2f}%".format(input_number)
