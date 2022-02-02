@@ -139,6 +139,13 @@ schools = [
         "initial_scrape_type": "dakstats",
         "final_scrape_type": "dakstats"
         },
+        {"name": "Blue Mountain",
+        "school_name": "blue_mountain",
+        "year": "2021",
+        "url": "http://www.dakstats.com/WebSync/Pages/Team/TeamSchedule.aspx?association=10&sg=MBA&sea=NAIMBA_2021&team=17743",
+        "initial_scrape_type": "dakstats",
+        "final_scrape_type": "dakstats"
+        },
         {"name": "Bluefield",
         "school_name": "bluefield",
         "year": "2020",
@@ -227,6 +234,13 @@ schools = [
         "school_name": "central_methodist",
         "year": "2020",
         "url": "https://www.dakstats.com/WebSync/Pages/Team/TeamSchedule.aspx?association=10&sg=MBA&sea=NAIMBA_2020&team=1645",
+        "initial_scrape_type": "dakstats",
+        "final_scrape_type": "dakstats"
+        },
+        {"name": "Central Methodist",
+        "school_name": "central_methodist",
+        "year": "2021",
+        "url": "http://www.dakstats.com/WebSync/Pages/Team/TeamSchedule.aspx?association=10&sg=MBA&sea=NAIMBA_2021&team=1645",
         "initial_scrape_type": "dakstats",
         "final_scrape_type": "dakstats"
         },
@@ -325,6 +339,13 @@ schools = [
         "school_name": "cumberlands",
         "year": "2020",
         "url": "https://www.dakstats.com/WebSync/Pages/Team/TeamSchedule.aspx?association=10&sg=MBA&sea=NAIMBA_2020&team=1656",
+        "initial_scrape_type": "dakstats",
+        "final_scrape_type": "dakstats"
+        },
+        {"name": "Cumberlands",
+        "school_name": "cumberlands",
+        "year": "2021",
+        "url": "http://www.dakstats.com/WebSync/Pages/Team/TeamSchedule.aspx?association=10&sg=MBA&sea=NAIMBA_2021&team=1656",
         "initial_scrape_type": "dakstats",
         "final_scrape_type": "dakstats"
         },
@@ -500,6 +521,14 @@ schools = [
         "school_name": "houston_victoria",
         "year": "2020",
         "url": "https://www.dakstats.com/WebSync/Pages/Team/TeamSchedule.aspx?association=10&sg=MBA&sea=NAIMBA_2020&team=8288",
+        "initial_scrape_type": "dakstats",
+        "final_scrape_type": "dakstats"
+        },
+        
+        {"name": "Houston Victoria",
+        "school_name": "houston_victoria",
+        "year": "2021",
+        "url": "http://www.dakstats.com/WebSync/Pages/Team/TeamSchedule.aspx?association=10&sg=MBA&sea=NAIMBA_2021&team=8288",
         "initial_scrape_type": "dakstats",
         "final_scrape_type": "dakstats"
         },
@@ -776,6 +805,13 @@ schools = [
         "initial_scrape_type": "dakstats",
         "final_scrape_type": "dakstats"
         },
+        {"name": "Peru State College",
+        "school_name": "peru_state_college",
+        "year": "2021",
+        "url": "http://www.dakstats.com/WebSync/Pages/Team/TeamSchedule.aspx?association=10&sg=MBA&sea=NAIMBA_2021&team=1755",
+        "initial_scrape_type": "dakstats",
+        "final_scrape_type": "dakstats"
+        },
         {"name": "Crowleys Ridge",
         "school_name": "crowleys_ridge",
         "year": "2019",
@@ -808,6 +844,14 @@ schools = [
         "school_name": "mid_america_nazarene",
         "year": "2021",
         "url": "http://www.dakstats.com/WebSync/Pages/Team/TeamSchedule.aspx?association=10&sg=MBA&sea=NAIMBA_2021&team=1723",
+        "initial_scrape_type": "dakstats",
+        "final_scrape_type": "dakstats"
+        },
+        
+        {"name": "Texas AM Texarkana",
+        "school_name": "texas_am_texarkana",
+        "year": "2021",
+        "url": "http://www.dakstats.com/WebSync/Pages/Team/TeamSchedule.aspx?association=10&sg=MBA&sea=NAIMBA_2021&team=20603",
         "initial_scrape_type": "dakstats",
         "final_scrape_type": "dakstats"
         },
@@ -1230,6 +1274,13 @@ schools = [
         "url": "http://www.dakstats.com/WebSync/Pages/Team/TeamSchedule.aspx?association=10&sg=MBA&sea=NAIMBA_2021&team=1785",
         "initial_scrape_type": "dakstats",
         "final_scrape_type": "dakstats"
+        },
+        {"name": "Webber International",
+        "school_name": "webber_international",
+        "year": "2021",
+        "url": "http://www.dakstats.com/WebSync/Pages/Team/TeamSchedule.aspx?association=10&sg=MBA&sea=NAIMBA_2021&team=1785",
+        "initial_scrape_type": "dakstats",
+        "final_scrape_type": "dakstats"
         }
         ]
 
@@ -1384,6 +1435,7 @@ def scrape_pages_dakstats(school, pages_to_scrape):
 
                 text = text.replace("- ", "\n", 1)
                 text = text.replace(". ", "\n")
+                text = text.replace(", ", "\n")
 
                 play_by_play_text += text
                 play_by_play_text += "\n"

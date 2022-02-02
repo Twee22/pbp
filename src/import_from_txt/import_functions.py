@@ -62,7 +62,7 @@ def get_players(team_name, year_from_list, year):
     return profiles
 
 def get_official_statistics(profile, team_name, year_from_list, year):
-    doc_name = "data/" + team_name + "/" + year + "/" + team_name + "_official_statistics_" + year +".txt"
+    doc_name = "data/" + team_name + "/" + year_from_list + "/" + team_name + "_official_statistics_" + year_from_list +".txt"
     
     try:
         # Try statement ensures that format is consistent
