@@ -1281,6 +1281,55 @@ schools = [
         "url": "http://www.dakstats.com/WebSync/Pages/Team/TeamSchedule.aspx?association=10&sg=MBA&sea=NAIMBA_2021&team=1785",
         "initial_scrape_type": "dakstats",
         "final_scrape_type": "dakstats"
+        },
+        {"name": "Missouri Valley",
+        "school_name": "missouri_valley",
+        "year": "2021",
+        "url": "http://www.dakstats.com/WebSync/Pages/Team/TeamSchedule.aspx?association=10&sg=MBA&sea=NAIMBA_2021&team=1729",
+        "initial_scrape_type": "dakstats",
+        "final_scrape_type": "dakstats"
+        },
+        {"name": "William Woods",
+        "school_name": "william_woods",
+        "year": "2021",
+        "url": "http://www.dakstats.com/WebSync/Pages/Team/TeamSchedule.aspx?association=10&sg=MBA&sea=NAIMBA_2021&team=1824",
+        "initial_scrape_type": "dakstats",
+        "final_scrape_type": "dakstats"
+        },
+        {"name": "Corban",
+        "school_name": "corban",
+        "year": "2021",
+        "url": "http://www.dakstats.com/WebSync/Pages/Team/TeamSchedule.aspx?association=10&sg=MBA&sea=NAIMBA_2021&team=1824",
+        "initial_scrape_type": "dakstats",
+        "final_scrape_type": "dakstats"
+        },
+        {"name": "Benedictine Mesa",
+        "school_name": "benedictine_mesa",
+        "year": "2021",
+        "url": "http://www.dakstats.com/WebSync/Pages/Team/TeamSchedule.aspx?association=10&sg=MBA&sea=NAIMBA_2021&team=20728",
+        "initial_scrape_type": "dakstats",
+        "final_scrape_type": "dakstats"
+        },
+        {"name": "William Jessup",
+        "school_name": "william_jessup",
+        "year": "2021",
+        "url": "http://www.dakstats.com/WebSync/Pages/Team/TeamSchedule.aspx?association=10&sg=MBA&sea=NAIMBA_2021&team=19203",
+        "initial_scrape_type": "dakstats",
+        "final_scrape_type": "dakstats"
+        },
+        {"name": "Concordia NEB",
+        "school_name": "concordia_(neb)",
+        "year": "2021",
+        "url": "http://www.dakstats.com/WebSync/Pages/Team/TeamSchedule.aspx?association=10&sg=MBA&sea=NAIMBA_2021&team=1652",
+        "initial_scrape_type": "dakstats",
+        "final_scrape_type": "dakstats"
+        },
+        {"name": "Bellevue",
+        "school_name": "bellevue",
+        "year": "2021",
+        "url": "http://www.dakstats.com/WebSync/Pages/Team/TeamSchedule.aspx?association=10&sg=MBA&sea=NAIMBA_2021&team=1623",
+        "initial_scrape_type": "dakstats",
+        "final_scrape_type": "dakstats"
         }
         ]
 

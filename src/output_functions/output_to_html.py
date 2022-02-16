@@ -172,7 +172,9 @@ def get_player_profiles(profiles, team_name, year_for_roster, year_for_report, h
 
     for profile in profiles:
         player_html = str()
-        if profile["PA"] >= how_many_pa_to_appear:
+        if (profile["PA"] >= how_many_pa_to_appear or 
+            (profile["Official_Statistics_Exist_Batting"] == True and profile["Official_Statistics_Batting"]["AB"] > how_many_pa_to_appear)
+            or (profile["Official_Statistics_Exist_Pitching"] == True)):
             player_html += "<p class=\"new-page\">#{} {} {}<br>".format(profile["number"], profile["f_name"].replace("_", " "), profile["name"].replace("_", " "))
             if years_seperated_or_together == "seperated":
                 player_html += "Year: {}<br>".format(profile["year"])
