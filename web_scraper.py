@@ -1330,6 +1330,13 @@ schools = [
         "url": "http://www.dakstats.com/WebSync/Pages/Team/TeamSchedule.aspx?association=10&sg=MBA&sea=NAIMBA_2021&team=1623",
         "initial_scrape_type": "dakstats",
         "final_scrape_type": "dakstats"
+        },
+        {"name": "Crowleys Ridge",
+        "school_name": "crowleys_ridge",
+        "year": "2021",
+        "url": "http://www.dakstats.com/WebSync/Pages/Team/TeamSchedule.aspx?association=10&sg=MBA&sea=NAIMBA_2021&team=20736",
+        "initial_scrape_type": "dakstats",
+        "final_scrape_type": "dakstats"
         }
         ]
 

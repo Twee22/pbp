@@ -213,108 +213,195 @@ def format_profile_to_html(profile):
     
     html_profile = ""
 
-    if "P" in str(profile["position"]) and profile["Official_Statistics_Exist_Pitching"] == True:
-        html_profile += """
-        <h>Official Pitching Statistics:</h>
-        <table>
-            <tr>
-                <td>ERA: {:.2f}</td>
-                <td>W: {}</td>
-                <td>L: {}</td>
-                <td>GP: {}</td>
-                <td>GS: {}</td>
-                <td>CG: {}</td>
-                <td>SHO: {}</td>
-                <td>CBO: {}</td>
-                <td>SV: {}</td>
-            </tr>
-            <tr>
-                <td>IP: {:.1f}</td>
-                <td>H: {}</td>
-                <td>R: {}</td>
-                <td>ER: {}</td>
-                <td>BB: {}</td>
-                <td>SO: {}</td>
-                <td>2B: {}</td>
-                <td>3B: {}</td>
-                <td>HR: {}</td>
-            </tr>
-            <tr>
-                <td>TBF: {}</td>
-                <td>B/Avg: {:.3f}</td>
-                <td>WP: {}</td>
-                <td>HBP: {}</td>
-                <td>BK: {}</td>
-                <td>SFA: {}</td>
-                <td>SHA: {}</td>
-                <td></td>
-                <td></td>
-            </tr>
-        </table>
-        """.format(profile["Official_Statistics_Pitching"]["ERA"],
-                        profile["Official_Statistics_Pitching"]["W"], profile["Official_Statistics_Pitching"]["L"],
-                        profile["Official_Statistics_Pitching"]["GP"], profile["Official_Statistics_Pitching"]["GS"],
-                        profile["Official_Statistics_Pitching"]["CG"], profile["Official_Statistics_Pitching"]["SHO"],
-                        profile["Official_Statistics_Pitching"]["CBO"], profile["Official_Statistics_Pitching"]["SV"],
-                        profile["Official_Statistics_Pitching"]["IP"], profile["Official_Statistics_Pitching"]["H"],
-                        profile["Official_Statistics_Pitching"]["R"], profile["Official_Statistics_Pitching"]["ER"],
-                        profile["Official_Statistics_Pitching"]["BB"], profile["Official_Statistics_Pitching"]["S0"],
-                        profile["Official_Statistics_Pitching"]["2B"], profile["Official_Statistics_Pitching"]["3B"],
-                        profile["Official_Statistics_Pitching"]["HR"], profile["Official_Statistics_Pitching"]["TBF"],
-                        profile["Official_Statistics_Pitching"]["B/Avg"], profile["Official_Statistics_Pitching"]["WP"],
-                        profile["Official_Statistics_Pitching"]["HBP"], profile["Official_Statistics_Pitching"]["BK"],
-                        profile["Official_Statistics_Pitching"]["SFA"], profile["Official_Statistics_Pitching"]["SHA"])
-    elif not "P" in str(profile["position"]) and profile["Official_Statistics_Exist_Batting"] == True:
-        html_profile += """
-        <h>Official Hitting Statistics:</h>
-        <table>
-            <tr>
-                <td>GP: {}</td>
-                <td>GS: {}</td>
-                <td>AVG: {:.3f}</td>
-                <td>AB: {}</td>
-                <td>R: {}</td>
-                <td>H: {}</td>
-                <td>2B: {}</td>
-                <td>3B: {}</td>
-                <td>HR: {}</td>
-            </tr>
-            <tr>
-                <td>RBI: {}</td>
-                <td>TB: {}</td>
-                <td>SLG: {:.3f}</td>
-                <td>BB: {}</td>
-                <td>HBP: {}</td>
-                <td>SO: {}</td>
-                <td>GDP: {}</td>
-                <td>OBP: {:.3f}</td>
-                <td>SF: {}</td>
-            </tr>
-            <tr>
-                <td>SH: {}</td>
-                <td>SB: {}</td>
-                <td>SBA: {}</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-        </table>
-        """.format(profile["Official_Statistics_Batting"]["GP"], profile["Official_Statistics_Batting"]["GS"],
-                        profile["Official_Statistics_Batting"]["AVG"], profile["Official_Statistics_Batting"]["AB"],
-                        profile["Official_Statistics_Batting"]["R"], profile["Official_Statistics_Batting"]["H"],
-                        profile["Official_Statistics_Batting"]["2B"], profile["Official_Statistics_Batting"]["3B"],
-                        profile["Official_Statistics_Batting"]["HR"], profile["Official_Statistics_Batting"]["RBI"],
-                        profile["Official_Statistics_Batting"]["TB"], profile["Official_Statistics_Batting"]["SLG"],
-                        profile["Official_Statistics_Batting"]["BB"], profile["Official_Statistics_Batting"]["HBP"],
-                        profile["Official_Statistics_Batting"]["SO"], profile["Official_Statistics_Batting"]["GDP"] ,
-                        profile["Official_Statistics_Batting"]["OBP"], profile["Official_Statistics_Batting"]["SF"],
-                        profile["Official_Statistics_Batting"]["SH"], profile["Official_Statistics_Batting"]["SB"],
-                        profile["Official_Statistics_Batting"]["SBA"]
-        )
-
+    if int(profile["year"]) <= 2021:
+        if "P" in str(profile["position"]) and profile["Official_Statistics_Exist_Pitching"] == True:
+            html_profile += """
+            <h>Official Pitching Statistics:</h>
+            <table>
+                <tr>
+                    <td>ERA: {:.2f}</td>
+                    <td>W: {}</td>
+                    <td>L: {}</td>
+                    <td>GP: {}</td>
+                    <td>GS: {}</td>
+                    <td>CG: {}</td>
+                    <td>SHO: {}</td>
+                    <td>CBO: {}</td>
+                    <td>SV: {}</td>
+                </tr>
+                <tr>
+                    <td>IP: {:.1f}</td>
+                    <td>H: {}</td>
+                    <td>R: {}</td>
+                    <td>ER: {}</td>
+                    <td>BB: {}</td>
+                    <td>SO: {}</td>
+                    <td>2B: {}</td>
+                    <td>3B: {}</td>
+                    <td>HR: {}</td>
+                </tr>
+                <tr>
+                    <td>TBF: {}</td>
+                    <td>B/Avg: {:.3f}</td>
+                    <td>WP: {}</td>
+                    <td>HBP: {}</td>
+                    <td>BK: {}</td>
+                    <td>SFA: {}</td>
+                    <td>SHA: {}</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            """.format(profile["Official_Statistics_Pitching"]["ERA"],
+                            profile["Official_Statistics_Pitching"]["W"], profile["Official_Statistics_Pitching"]["L"],
+                            profile["Official_Statistics_Pitching"]["GP"], profile["Official_Statistics_Pitching"]["GS"],
+                            profile["Official_Statistics_Pitching"]["CG"], profile["Official_Statistics_Pitching"]["SHO"],
+                            profile["Official_Statistics_Pitching"]["CBO"], profile["Official_Statistics_Pitching"]["SV"],
+                            profile["Official_Statistics_Pitching"]["IP"], profile["Official_Statistics_Pitching"]["H"],
+                            profile["Official_Statistics_Pitching"]["R"], profile["Official_Statistics_Pitching"]["ER"],
+                            profile["Official_Statistics_Pitching"]["BB"], profile["Official_Statistics_Pitching"]["S0"],
+                            profile["Official_Statistics_Pitching"]["2B"], profile["Official_Statistics_Pitching"]["3B"],
+                            profile["Official_Statistics_Pitching"]["HR"], profile["Official_Statistics_Pitching"]["TBF"],
+                            profile["Official_Statistics_Pitching"]["B/Avg"], profile["Official_Statistics_Pitching"]["WP"],
+                            profile["Official_Statistics_Pitching"]["HBP"], profile["Official_Statistics_Pitching"]["BK"],
+                            profile["Official_Statistics_Pitching"]["SFA"], profile["Official_Statistics_Pitching"]["SHA"])
+        elif not "P" in str(profile["position"]) and profile["Official_Statistics_Exist_Batting"] == True:
+            html_profile += """
+            <h>Official Hitting Statistics:</h>
+            <table>
+                <tr>
+                    <td>GP: {}</td>
+                    <td>GS: {}</td>
+                    <td>AVG: {:.3f}</td>
+                    <td>AB: {}</td>
+                    <td>R: {}</td>
+                    <td>H: {}</td>
+                    <td>2B: {}</td>
+                    <td>3B: {}</td>
+                    <td>HR: {}</td>
+                </tr>
+                <tr>
+                    <td>RBI: {}</td>
+                    <td>TB: {}</td>
+                    <td>SLG: {:.3f}</td>
+                    <td>BB: {}</td>
+                    <td>HBP: {}</td>
+                    <td>SO: {}</td>
+                    <td>GDP: {}</td>
+                    <td>OBP: {:.3f}</td>
+                    <td>SF: {}</td>
+                </tr>
+                <tr>
+                    <td>SH: {}</td>
+                    <td>SB: {}</td>
+                    <td>SBA: {}</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            """.format(profile["Official_Statistics_Batting"]["GP"], profile["Official_Statistics_Batting"]["GS"],
+                            profile["Official_Statistics_Batting"]["AVG"], profile["Official_Statistics_Batting"]["AB"],
+                            profile["Official_Statistics_Batting"]["R"], profile["Official_Statistics_Batting"]["H"],
+                            profile["Official_Statistics_Batting"]["2B"], profile["Official_Statistics_Batting"]["3B"],
+                            profile["Official_Statistics_Batting"]["HR"], profile["Official_Statistics_Batting"]["RBI"],
+                            profile["Official_Statistics_Batting"]["TB"], profile["Official_Statistics_Batting"]["SLG"],
+                            profile["Official_Statistics_Batting"]["BB"], profile["Official_Statistics_Batting"]["HBP"],
+                            profile["Official_Statistics_Batting"]["SO"], profile["Official_Statistics_Batting"]["GDP"] ,
+                            profile["Official_Statistics_Batting"]["OBP"], profile["Official_Statistics_Batting"]["SF"],
+                            profile["Official_Statistics_Batting"]["SH"], profile["Official_Statistics_Batting"]["SB"],
+                            profile["Official_Statistics_Batting"]["SBA"]
+            )
+    else:
+        if "P" in str(profile["position"]) and profile["Official_Statistics_Exist_Pitching"] == True:
+            html_profile += """
+            <h>Official Pitching Statistics:</h>
+            <table>
+                <tr>
+                    <td>APP: {}</td>
+                    <td>GS: {}</td>
+                    <td>W: {}</td>
+                    <td>L: {}</td>
+                    <td>SV: {}</td>
+                    <td>CG: {}</td>
+                    <td>IP: {:.1f}</td>
+                    <td>H: {}</td>
+                </tr>
+                <tr>
+                    <td>R: {}</td>
+                    <td>ER: {}</td>
+                    <td>BB: {}</td>
+                    <td>K: {}</td>
+                    <td>K/9: {:.1f}</td>
+                    <td>HR: {}</td>
+                    <td>ERA: {:.3f}</td>
+                    <td></td>
+                </tr>
+            </table>
+            """.format(profile["Official_Statistics_Pitching"]["APP"],
+                            profile["Official_Statistics_Pitching"]["GS"], profile["Official_Statistics_Pitching"]["W"],
+                            profile["Official_Statistics_Pitching"]["L"], profile["Official_Statistics_Pitching"]["SV"],
+                            profile["Official_Statistics_Pitching"]["CG"], profile["Official_Statistics_Pitching"]["IP"],
+                            profile["Official_Statistics_Pitching"]["H"], profile["Official_Statistics_Pitching"]["R"],
+                            profile["Official_Statistics_Pitching"]["ER"], profile["Official_Statistics_Pitching"]["BB"],
+                            profile["Official_Statistics_Pitching"]["K"], profile["Official_Statistics_Pitching"]["K/9"],
+                            profile["Official_Statistics_Pitching"]["HR"], profile["Official_Statistics_Pitching"]["ERA"])
+        elif not "P" in str(profile["position"]) and profile["Official_Statistics_Exist_Batting"] == True:
+            html_profile += """
+            <h>Official Hitting Statistics:</h>
+            <table>
+                <tr>
+                    <td>GP: {}</td>
+                    <td>AB: {}</td>
+                    <td>R: {}</td>
+                    <td>H: {}</td>
+                    <td>2B: {}</td>
+                    <td>3B: {}</td>
+                    <td>HR: {}</td>
+                    <td>RBI: {}</td>
+                    <td>BB: {}</td>
+                </tr>
+                <tr>
+                    <td>K: {}</td>
+                    <td>SB: {}</td>
+                    <td>CS: {}</td>
+                    <td>AVG: {:.3f}</td>
+                    <td>OBP: {:.3f}</td>
+                    <td>SLG: {:.3f}</td>
+                    <td>HBP: {}</td>
+                    <td>SF: {}</td>
+                    <td>SH: {}</td>
+                </tr>
+                <tr>
+                    <td>TB: {}</td>
+                    <td>XBH: {}</td>
+                    <td>HDP: {}</td>
+                    <td>GO: {}</td>
+                    <td>FO: {}</td>
+                    <td>GO/FO: {:.3f}</td>
+                    <td>PA: {}</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            """.format(profile["Official_Statistics_Batting"]["GP"], profile["Official_Statistics_Batting"]["AB"],
+                            profile["Official_Statistics_Batting"]["R"], profile["Official_Statistics_Batting"]["H"],
+                            profile["Official_Statistics_Batting"]["2B"], profile["Official_Statistics_Batting"]["3B"],
+                            profile["Official_Statistics_Batting"]["HR"], profile["Official_Statistics_Batting"]["RBI"],
+                            profile["Official_Statistics_Batting"]["BB"], profile["Official_Statistics_Batting"]["K"],
+                            profile["Official_Statistics_Batting"]["SB"], profile["Official_Statistics_Batting"]["CS"],
+                            profile["Official_Statistics_Batting"]["AVG"], profile["Official_Statistics_Batting"]["OBP"],
+                            profile["Official_Statistics_Batting"]["SLG"], profile["Official_Statistics_Batting"]["HBP"] ,
+                            profile["Official_Statistics_Batting"]["SF"], profile["Official_Statistics_Batting"]["SH"],
+                            profile["Official_Statistics_Batting"]["TB"], profile["Official_Statistics_Batting"]["XBH"],
+                            profile["Official_Statistics_Batting"]["HDP"], profile["Official_Statistics_Batting"]["GO"],
+                            profile["Official_Statistics_Batting"]["FO"], profile["Official_Statistics_Batting"]["GO/FO"],
+                            profile["Official_Statistics_Batting"]["PA"]
+                )
+                
     html_profile += "<h>Confirmable Statistics:</h><table>"
 
     if "P" in str(profile["position"]):
