@@ -27,7 +27,8 @@ def create_profile():
                         "K": 0, "K/9": 0},
                 "Official_Statistics_Batting": {"GP": 0, "GS": 0, "AVG": 0, "AB": 0, "R": 0, "H": 0, "2B": 0, "3B": 0, 
                         "HR": 0, "RBI": 0, "TB": 0, "SLG%": 0, "BB": 0, "HBP": 0, "SO": 0, "GDP": 0, 
-                        "OB%": 0, "SF": 0, "SH": 0, "SB": 0, "SBA": 0},
+                        "OB%": 0, "SF": 0, "SH": 0, "SB": 0, "SBA": 0, "XBH": 0, "HDP": 0, "GO": 0, "FO": 0,
+                        "GO/FO": 0, "PA": 0, "K": 0, "CS": 0, "OBP": 0, "SLG": 0},
                 "Official_Statistics_Exist_Batting": False, "Official_Statistics_Exist_Pitching": False
     }
     return profile
