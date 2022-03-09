@@ -363,6 +363,13 @@ schools = [
         "initial_scrape_type": "dakstats",
         "final_scrape_type": "dakstats"
         },
+        {"name": "Dakota Wesleyan",
+        "school_name": "dakota_wesleyan",
+        "year": "2021",
+        "url": "http://www.dakstats.com/WebSync/Pages/Team/TeamSchedule.aspx?association=10&sg=MBA&sea=NAIMBA_2021&team=1659",
+        "initial_scrape_type": "dakstats",
+        "final_scrape_type": "dakstats"
+        },
         {"name": "Doane",
         "school_name": "doane",
         "year": "2020",
@@ -395,6 +402,13 @@ schools = [
         "school_name": "evangel",
         "year": "2020",
         "url": "https://www.dakstats.com/WebSync/Pages/Team/TeamSchedule.aspx?association=10&sg=MBA&sea=NAIMBA_2020&team=1668",
+        "initial_scrape_type": "dakstats",
+        "final_scrape_type": "dakstats"
+        },
+        {"name": "Evangel",
+        "school_name": "evangel",
+        "year": "2021",
+        "url": "http://www.dakstats.com/WebSync/Pages/Team/TeamSchedule.aspx?association=10&sg=MBA&sea=NAIMBA_2021&team=1668",
         "initial_scrape_type": "dakstats",
         "final_scrape_type": "dakstats"
         },
@@ -585,6 +599,13 @@ schools = [
         "school_name": "jamestown",
         "year": "2020",
         "url": "https://www.dakstats.com/WebSync/Pages/Team/TeamSchedule.aspx?association=10&sg=MBA&sea=NAIMBA_2020&team=1699",
+        "initial_scrape_type": "dakstats",
+        "final_scrape_type": "dakstats"
+        },
+        {"name": "Jamestown",
+        "school_name": "jamestown",
+        "year": "2021",
+        "url": "http://www.dakstats.com/WebSync/Pages/Team/TeamSchedule.aspx?association=10&sg=MBA&sea=NAIMBA_2021&team=1699",
         "initial_scrape_type": "dakstats",
         "final_scrape_type": "dakstats"
         },
