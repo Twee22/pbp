@@ -90,6 +90,13 @@ schools = [
         "initial_scrape_type": "dakstats",
         "final_scrape_type": "dakstats"
         },
+        {"name": "Baker",
+        "school_name": "baker",
+        "year": "2021",
+        "url": "http://www.dakstats.com/WebSync/Pages/Team/TeamSchedule.aspx?association=10&sg=MBA&sea=NAIMBA_2021&team=1620",
+        "initial_scrape_type": "dakstats",
+        "final_scrape_type": "dakstats"
+        },
         {"name": "Bellevue",
         "school_name": "bellevue",
         "year": "2020",
@@ -248,6 +255,13 @@ schools = [
         "school_name": "clarke",
         "year": "2020",
         "url": "https://www.dakstats.com/WebSync/Pages/Team/TeamSchedule.aspx?association=10&sg=MBA&sea=NAIMBA_2020&team=8289",
+        "initial_scrape_type": "dakstats",
+        "final_scrape_type": "dakstats"
+        },
+        {"name": "Clarke",
+        "school_name": "clarke",
+        "year": "2021",
+        "url": "http://www.dakstats.com/WebSync/Pages/Team/TeamSchedule.aspx?association=10&sg=MBA&sea=NAIMBA_2021&team=8289",
         "initial_scrape_type": "dakstats",
         "final_scrape_type": "dakstats"
         },
@@ -517,6 +531,13 @@ schools = [
         "initial_scrape_type": "dakstats",
         "final_scrape_type": "dakstats"
         },
+        {"name": "Harris Stowe State",
+        "school_name": "harris_stowe_state",
+        "year": "2021",
+        "url": "http://www.dakstats.com/WebSync/Pages/Team/TeamSchedule.aspx?association=10&sg=MBA&sea=NAIMBA_2021&team=1684",
+        "initial_scrape_type": "dakstats",
+        "final_scrape_type": "dakstats"
+        },
         {"name": "Hastings",
         "school_name": "hastings",
         "year": "2020",
@@ -613,6 +634,13 @@ schools = [
         "school_name": "jarvis_christian",
         "year": "2020",
         "url": "https://www.dakstats.com/WebSync/Pages/Team/TeamSchedule.aspx?association=10&sg=MBA&sea=NAIMBA_2020&team=18985",
+        "initial_scrape_type": "dakstats",
+        "final_scrape_type": "dakstats"
+        },
+        {"name": "Jarvis Christian",
+        "school_name": "jarvis_christian",
+        "year": "2021",
+        "url": "http://www.dakstats.com/WebSync/Pages/Team/TeamSchedule.aspx?association=10&sg=MBA&sea=NAIMBA_2021&team=18985",
         "initial_scrape_type": "dakstats",
         "final_scrape_type": "dakstats"
         },
@@ -1363,6 +1391,13 @@ schools = [
         "school_name": "trinity_christian",
         "year": "2021",
         "url": "http://www.dakstats.com/WebSync/Pages/Team/TeamSchedule.aspx?association=10&sg=MBA&sea=NAIMBA_2021&team=1792",
+        "initial_scrape_type": "dakstats",
+        "final_scrape_type": "dakstats"
+        },
+        {"name": "Westmont",
+        "school_name": "westmont",
+        "year": "2021",
+        "url": "http://www.dakstats.com/WebSync/Pages/Team/TeamSchedule.aspx?association=10&sg=MBA&sea=NAIMBA_2021&team=1820",
         "initial_scrape_type": "dakstats",
         "final_scrape_type": "dakstats"
         }

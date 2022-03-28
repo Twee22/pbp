@@ -402,7 +402,7 @@ def format_profile_to_html(profile):
                             profile["Official_Statistics_Batting"]["PA"]
                 )
                 
-    html_profile += "<h>Confirmable Statistics:</h><table>"
+    html_profile += "<h>Calculated Statistics:</h><table>"
 
     if "P" in str(profile["position"]):
         html_profile += """    
