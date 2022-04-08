@@ -69,7 +69,7 @@ def get_style_sheet(profiles, team_name, year_for_roster, year_for_report, how_m
     .centrefield {
         position: absolute;
         top: 25%;
-        left: 43%;
+        left: 42.5%
     }
     .rightcentre {
         position: absolute;
@@ -636,8 +636,8 @@ def create_spray_chart(profile, total):
             <div class="catcher">{:.2f}%</div>
             <div class="image_name">Overall Spray Chart</div>
         </div>
-    """.format(profile["Location"]["7"]/total*100, format_gaps(profile["Location"]["78"]/total*100),
-            profile["Location"]["8"]/total*100, format_gaps(profile["Location"]["89"]/total*100), 
+    """.format(profile["Location"]["7"]/total*100, format_numbers(profile["Location"]["78"]/total*100),
+            profile["Location"]["8"]/total*100, format_numbers(profile["Location"]["89"]/total*100), 
             profile["Location"]["9"]/total*100, profile["Location"]["5"]/total*100,
             profile["Location"]["6"]/total*100, profile["Location"]["4"]/total*100, 
             profile["Location"]["3"]/total*100, profile["Location"]["2"]/total*100,
@@ -657,21 +657,21 @@ def create_spray_chart(profile, total):
                 <div class="centrefield">{:.2f}%</div>
                 <div class="rightcentre">{}</div>
                 <div class="rightfield">{:.2f}%</div>
-                <div class="thirdbase">{:.2f}%</div>
-                <div class="shortstop">{:.2f}%</div>
-                <div class="secondbase">{:.2f}%</div>
-                <div class="firstbase">{:.2f}%</div>
-                <div class="pitcher">{:.2f}%</div>
-                <div class="catcher">{:.2f}%</div>
+                <div class="thirdbase">{}</div>
+                <div class="shortstop">{}</div>
+                <div class="secondbase">{}</div>
+                <div class="firstbase">{}</div>
+                <div class="pitcher">{}</div>
+                <div class="catcher">{}</div>
                 <div class="image_name">Spray Chart for XBHs</div>
             </div>
         </div>
-        """.format(profile["XBHLocation"]["7"]/total*100, format_gaps(profile["XBHLocation"]["78"]/total*100),
-                profile["XBHLocation"]["8"]/total*100, format_gaps(profile["XBHLocation"]["89"]/total*100), 
-                profile["XBHLocation"]["9"]/total*100, profile["XBHLocation"]["5"]/total*100,
-                profile["XBHLocation"]["6"]/total*100, profile["XBHLocation"]["4"]/total*100, 
-                profile["XBHLocation"]["3"]/total*100, profile["XBHLocation"]["2"]/total*100,
-                profile["XBHLocation"]["1"]/total*100)
+        """.format((profile["XBHLocation"]["7"]/total*100), format_numbers(profile["XBHLocation"]["78"]/total*100),
+                (profile["XBHLocation"]["8"]/total*100), format_numbers(profile["XBHLocation"]["89"]/total*100), 
+                (profile["XBHLocation"]["9"]/total*100), format_numbers(profile["XBHLocation"]["5"]/total*100),
+                format_numbers(profile["XBHLocation"]["6"]/total*100), format_numbers(profile["XBHLocation"]["4"]/total*100), 
+                format_numbers(profile["XBHLocation"]["3"]/total*100), format_numbers(profile["XBHLocation"]["2"]/total*100),
+                format_numbers(profile["XBHLocation"]["1"]/total*100))
     else:
         message += """
         </div>
@@ -679,7 +679,7 @@ def create_spray_chart(profile, total):
         
     return message
 
-def format_gaps(input_number):
+def format_numbers(input_number):
     if input_number == 0:
         return ''
     else:

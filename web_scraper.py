@@ -342,6 +342,13 @@ schools = [
         "initial_scrape_type": "dakstats",
         "final_scrape_type": "dakstats"
         },
+        {"name": "Culver Stockton",
+        "school_name": "culver_stockton",
+        "year": "2021",
+        "url": "http://www.dakstats.com/WebSync/Pages/Team/TeamSchedule.aspx?association=10&sg=MBA&sea=NAIMBA_2021&team=1655",
+        "initial_scrape_type": "dakstats",
+        "final_scrape_type": "dakstats"
+        },
         {"name": "Cumberland",
         "school_name": "cumberland",
         "year": "2020",
@@ -517,6 +524,13 @@ schools = [
         "initial_scrape_type": "dakstats",
         "final_scrape_type": "dakstats"
         },
+        {"name": "Grand View",
+        "school_name": "grand_view",
+        "year": "2021",
+        "url": "http://www.dakstats.com/WebSync/Pages/Team/TeamSchedule.aspx?association=10&sg=MBA&sea=NAIMBA_2021&team=1682",
+        "initial_scrape_type": "dakstats",
+        "final_scrape_type": "dakstats"
+        },
         {"name": "Hannibal LaGrange",
         "school_name": "hannibal_lagrange",
         "year": "2020",
@@ -549,6 +563,13 @@ schools = [
         "school_name": "hope_international",
         "year": "2020",
         "url": "https://www.dakstats.com/WebSync/Pages/Team/TeamSchedule.aspx?association=10&sg=MBA&sea=NAIMBA_2020&team=20599",
+        "initial_scrape_type": "dakstats",
+        "final_scrape_type": "dakstats"
+        },
+        {"name": "Hope International",
+        "school_name": "hope_international",
+        "year": "2021",
+        "url": "http://www.dakstats.com/WebSync/Pages/Team/TeamSchedule.aspx?association=10&sg=MBA&sea=NAIMBA_2021&team=20599",
         "initial_scrape_type": "dakstats",
         "final_scrape_type": "dakstats"
         },
@@ -774,6 +795,13 @@ schools = [
         "school_name": "lyon",
         "year": "2020",
         "url": "https://www.dakstats.com/WebSync/Pages/Team/TeamSchedule.aspx?association=10&sg=MBA&sea=NAIMBA_2020&team=1713",
+        "initial_scrape_type": "dakstats",
+        "final_scrape_type": "dakstats"
+        },
+        {"name": "Lyon",
+        "school_name": "lyon",
+        "year": "2021",
+        "url": "http://www.dakstats.com/WebSync/Pages/Team/TeamSchedule.aspx?association=10&sg=MBA&sea=NAIMBA_2021&team=1713",
         "initial_scrape_type": "dakstats",
         "final_scrape_type": "dakstats"
         },
@@ -1398,6 +1426,13 @@ schools = [
         "school_name": "westmont",
         "year": "2021",
         "url": "http://www.dakstats.com/WebSync/Pages/Team/TeamSchedule.aspx?association=10&sg=MBA&sea=NAIMBA_2021&team=1820",
+        "initial_scrape_type": "dakstats",
+        "final_scrape_type": "dakstats"
+        },
+        {"name": "The Masters",
+        "school_name": "the_masters",
+        "year": "2021",
+        "url": "http://www.dakstats.com/WebSync/Pages/Team/TeamSchedule.aspx?association=10&sg=MBA&sea=NAIMBA_2021&team=1795",
         "initial_scrape_type": "dakstats",
         "final_scrape_type": "dakstats"
         }
