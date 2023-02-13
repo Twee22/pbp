@@ -1,4 +1,4 @@
-extracting data from baseball play by play scores
+Turns baseball play by play data into scouting reports
 
 MIT License
 
